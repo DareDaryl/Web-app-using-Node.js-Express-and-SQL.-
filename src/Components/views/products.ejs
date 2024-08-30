@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Products Home Page</title>
+</head>
+
+<body>
+    <center>Hello <%=name%>.  This is our products home page.</center>
+    <ul>
+        <% users.forEach((user)=>{%>
+            <li>
+                <%=user.id%>,<%=user.name%>,<%=user.address%>,<%=user.country%>
+            </li>
+        <%});%>
+    </ul>
+</body>
+</html>
