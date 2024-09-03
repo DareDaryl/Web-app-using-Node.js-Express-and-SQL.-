@@ -1,33 +1,34 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Layout from './Pages/Layout';
-import Home from './Pages/Home';
-import Registration from './Pages/Registration';
-import Contact from './Pages/Contact';
-import NoPage from './Pages/NoPage';
-import Login from './Pages/Login';
-import Dashboard from './Pages/Dashboard';
+import Layout from './Pages/Layout'; // Ensure Layout.js exists
+import Home from './Pages/Home'; // Ensure Home.js exists
+import Registration from './Pages/Registration'; // Ensure Registration.js exists
+import Contact from './Pages/Contact'; // Ensure Contact.js exists
+import NoPage from './Pages/NoPage'; // Ensure NoPage.js exists
 
-function App() {
-    return (
-        <Router>
-            <Routes>
-                <Route path="/" element={<Layout />}>
-                    <Route index element={<Home />} />
-                    <Route path="registration" element={<Registration />} />
-                    <Route path="contact" element={<Contact />} />
-                    <Route path="login" element={<Login />} />
-                    <Route path="dashboard" element={<Dashboard />} />
-                    <Route path="*" element={<NoPage />} /> {/* Catch-all route for 404 */}
-                </Route>
-            </Routes>
-        </Router>
-    );
+// The commented-out Redux-related code is removed for simplicity
+// Import Redux if you plan to use it and handle reducers properly
+
+export default function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="registration" element={<Registration />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="*" element={<NoPage />} /> {/* Catch-all route for 404 */}
+        </Route>
+      </Routes>
+    </Router>
+  );
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<App />);
+
+
 
 
 

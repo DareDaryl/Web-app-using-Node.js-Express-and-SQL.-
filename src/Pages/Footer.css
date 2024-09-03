@@ -1,0 +1,53 @@
+/* src/Pages/Footer.css */
+
+footer {
+  padding: 0rem 0rem; /* Increased padding for better spacing */
+  background: linear-gradient(135deg, #1a1818, #7d3232); /* Gradient background */
+  color: white;
+  text-align: center;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+  border-top: 5px solid #666; /* Border to separate from content */
+  position:relative; /* Ensure footer is positioned correctly */
+  z-index: 10; /* Keeps footer above other content */
+}
+
+footer a {
+  color: #f0f0f0; /* Slightly lighter color for links */
+  text-decoration: none;
+  transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth transition */
+}
+
+footer a:hover {
+  color: #ff6347; /* Change link color on hover */
+  text-decoration: underline;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  footer {
+      padding: 1rem; /* Adjust padding on smaller screens */
+  }
+}
+
+
+
+
+
+/* src/Pages/Footer.css 
+footer {
+    /*padding: 1rem;
+    padding:0dvh;
+    background-color: #333;
+    color: white;
+    text-align: center;
+  }
+  
+  footer a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }*/
+  

@@ -2,6 +2,21 @@
   text-align: center;
   font-family: Arial, sans-serif;
 }
+:root {
+  --color-primary: #73040f;
+  --color-secondary: #f8f2f3;
+  --color-tertiary: #500404;
+  --color-quaternary: #aba3a4;
+  --color-five: #696566;
+}
+
+.welcome {
+color: var(--color-secondary);
+background-color: var(--color-primary);
+text-align: center;
+font-size: 48px;
+margin-bottom: 20px;
+}
 
 .background {
   background-image: url('./Images.svg/rain.jpg'); /* Adjust path as needed */

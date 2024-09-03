@@ -1,0 +1,80 @@
+/* src/Pages/Layout.css */
+.layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif; /* More modern font */
+}
+
+.header {
+    background: linear-gradient(135deg, #090909, #e8e807); /* Stylish gradient */
+    color: white;
+    padding: 0rem 0rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 2px px rgba(0, 0, 0, 0.1);
+       /* Border to define the header area */
+    border: 2px solid #211f17; /* Golden color to contrast with gradient */
+       /* Ensure the header takes full width */
+    width: 100%;
+}
+
+.header .logo h1 {
+    margin: 0;
+    font-size: 2.0rem;
+}
+
+.header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+    display: flex;
+    gap: 1rem;
+}
+
+.header nav ul li {
+    margin: 0;
+}
+
+.header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.header nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Slight background on hover */
+    color: #d1d1d1;
+}
+
+/*.main-content {   
+    flex: 1;
+    padding: 2rem;
+    background: #f4f4f4;
+    transition: background-color 0.3s ease;
+}*/
+.main-content {
+    flex: 1;
+    padding: 2rem;
+    background: url('/src/Images.svg/rain.jpg') no-repeat center center; /* Background image */
+    background-size: cover; /* Cover the entire content area */
+    color: white; /* Optional: ensures text is readable on a dark background */
+    transition: background-color 0.3s ease;
+}
+.footer {
+    /*background: #1c2534;*/
+    background: linear-gradient(135deg, #1a1818, #7d3232);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.footer p {
+    margin: 0;
+    font-size: 0.875rem;
+}

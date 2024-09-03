@@ -1,0 +1,78 @@
+/* src/Pages/Layout.css */
+.layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Full viewport height */
+}
+
+.header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: left;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: #333;
+    color: white;
+  }
+  .logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+  nav a {
+    color: white;
+    text-decoration: none;
+  }
+  nav a:hover {
+    text-decoration: underline;
+  }
+.main-content {
+    flex: 1; /* Takes up available space between header and footer */
+    padding: 1rem;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+footer {
+    padding: 0rem 0rem; /* Increased padding for better spacing */
+    background: linear-gradient(135deg, #1a1818, #7d3232); /* Gradient background */
+    color: white;
+    text-align: center;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+    border-top: 5px solid #666; /* Border to separate from content */
+    position:relative; /* Ensure footer is positioned correctly */
+    z-index: 10; /* Keeps footer above other content */
+  }
+  
+  footer a {
+    color: #f0f0f0; /* Slightly lighter color for links */
+    text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth transition */
+  }
+  
+  footer a:hover {
+    color: #ff6347; /* Change link color on hover */
+    text-decoration: underline;
+  }
+  
+  /* Responsive styling */
+  @media (max-width: 768px) {
+    footer {
+        padding: 1rem; /* Adjust padding on smaller screens */
+    }
+  }

@@ -1,4 +1,46 @@
-import express from 'express';
+const express = require('express');
+const router = express.Router();
+
+module.exports = (dbConnection) => {
+    // Get all users
+    router.get('/', (req, res) => {
+        dbConnection.query('SELECT * FROM users', (err, results) => {
+            if (err) return res.status(500).send(err);
+            res.json(results);
+        });
+    });
+
+    // Get a user by ID
+    router.get('/:id', (req, res) => {
+        const { id } = req.params;
+        dbConnection.query('SELECT * FROM users WHERE id = ?', [id], (err, results) => {
+            if (err) return res.status(500).send(err);
+            if (results.length === 0) return res.status(404).send('User not found');
+            res.json(results[0]);
+        });
+    });
+
+    // Create a new user
+    router.post('/', (req, res) => {
+        const { username, password, email } = req.body;
+        dbConnection.query('INSERT INTO users (username, password, email) VALUES (?, ?, ?)', 
+        [username, password, email], (err, results) => {
+            if (err) return res.status(500).send(err);
+            res.status(201).json({ id: results.insertId, username, email });
+        });
+    });
+
+    return router;
+};
+
+
+
+
+
+
+
+
+/*import express from 'express';
 import mysql from 'mysql2';
 //localhost:3000/users
 const router = express.Router()
@@ -12,7 +54,7 @@ const connection = mysql.createPool({
 
   /*************************************************************************
    * INSERT (POST)
-   *************************************************************************/
+   ************************************************************************
   router.post("/", async (req, res) => {
     console.log('/users/ post called')
     try {
@@ -33,7 +75,7 @@ const connection = mysql.createPool({
 });
 /*************************************************************************
  * QUERY (GET)
- *************************************************************************/
+ ************************************************************************
 router.get("/", async (req, res) => {
   console.log('/users/ get called')
 
@@ -52,7 +94,7 @@ router.get("/", async (req, res) => {
 });
 /*************************************************************************
  * QUERY BY ID (GET)
- *************************************************************************/
+ ************************************************************************
 router.get("/:id", async(req, res) => {
   console.log('/users/:id get called')
     try {
@@ -71,7 +113,7 @@ router.get("/:id", async(req, res) => {
 });
 /*************************************************************************
  * UPDATE (PATCH)
- *************************************************************************/
+ ************************************************************************
 router.patch("/:id", async (req, res) => {
   console.log('/users/:id patch called')
     try {
@@ -94,7 +136,7 @@ router.patch("/:id", async (req, res) => {
   });
 /*************************************************************************
  * DELETE (DELETE)
- *************************************************************************/
+ ************************************************************************
 router.delete("/:id", async (req, res) => {
   console.log('/users/:id delete called')
 
@@ -116,3 +158,4 @@ router.delete("/:id", async (req, res) => {
     }
 });
 export default router;
+*/

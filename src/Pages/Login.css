@@ -1,0 +1,58 @@
+/* src/Pages/Login.css */
+.login-container {
+    max-width: 400px;
+    margin: auto;
+    padding: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h2 {
+    text-align: center;
+    color: black; /* Change header color to black */
+    font-weight: bold; /* Make header text bold */
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #060505;
+    border-radius: 4px;
+}
+
+.error-message {
+    color: rgb(79, 2, 2);
+    margin-top: 0.5rem;
+    font-weight: bold; /* Make the text bold */
+    font-size: 1.25rem; /* Increase the font size, adjust as needed */
+}
+
+button {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* src/Pages/Dashboard.css */
+.dashboard-container {
+    padding: 2rem;
+    text-align: center;
+}

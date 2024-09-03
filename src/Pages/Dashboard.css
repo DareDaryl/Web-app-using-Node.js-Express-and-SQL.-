@@ -1,0 +1,203 @@
+/* src/Pages/Dashboard.css */
+
+.dashboard-container {
+    max-width: 800px; /* Match width with login page */
+    margin: auto; /* Center the container */
+    padding: 1.5rem;
+    border: 1px solid #ddd; /* Add border similar to login */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard-header {
+    background: 
+      url('/src/Images.svg/rain.jpg'); /* Replace with the path to your image */
+    background-size: cover; /* Cover the entire header */
+    background-position: center; /* Center the image */
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.dashboard-content {
+    display: flex;
+    flex: 1;
+    overflow: hidden; /* Prevent overflow */
+}
+
+.category-menu {
+    width: 300px; /* Slightly wider menu */
+    background: #ffffff; /* Clean white background */
+    padding: 1.5rem;
+    border-right: 2px solid #e0e0e0; /* Lighter border color */
+    overflow-y: auto; /* Enable scrolling if necessary */
+    box-shadow: 4px 0 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    transition: transform 0.3s ease; /* Smooth transition effect */
+}
+
+.category-menu:hover {
+    transform: translateX(-10px); /* Slight movement effect on hover */
+}
+
+.category-menu h2 {
+    margin-top: 0;
+    color: #333; /* Darker text color */
+    font-size: 1.25rem; /* Slightly larger font size */
+}
+
+.category-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.category-menu li {
+    margin-bottom: 0.75rem; /* Increased spacing between items */
+}
+
+.category-menu button {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px; /* Rounded corners */
+    background: linear-gradient(90deg, #040608, #0a1724); /* Gradient background */
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.category-menu button:hover {
+    background: #0a0d12;
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+.questions-section {
+    flex: 1;
+    padding: 1rem;
+    background: #ffffff; /* Clean white background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+.questions-section h2 {
+    margin-top: 0;
+    color: #333; /* Darker text color */
+    font-size: 1.25rem; /* Slightly larger font size */
+}
+
+.questions-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.questions-section li {
+    margin-bottom: 0.75rem; /* Increased spacing between questions */
+    padding: 1rem;
+    background: #f0f0f0; /* Light background for each item */
+    border-radius: 4px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(253, 236, 236, 0.1); /* Subtle shadow */
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.questions-section li:hover {
+    background: #e0e0e0; /* Slightly darker background on hover */
+    transform: translateY(-2px); /* Lift up effect on hover */
+}
+/* src/Pages/Dashboard.css */
+
+/* Add or update styles for buttons within the questions section */
+.questions-section button {
+    background-color: #1c1e20; /* Background color of the button */
+    color: white; /* Text color of the button */
+    border: none; /* Remove default border */
+    border-radius: 4px; /* Rounded corners */
+    padding: 0.5rem 1rem; /* Add padding inside the button */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    font-size: 1rem; /* Set font size */
+    transition: background-color 0.3s ease; /* Smooth transition effect */
+}
+
+/* Hover effect for buttons */
+.questions-section button:hover {
+    background-color: #0056b3; /* Darker color when hovering */
+}
+
+
+/* Existing styles... */
+
+/* src/Pages/Dashboard.css */
+
+/* Existing styles... */
+
+.answer-container {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    border: 1px solid #0d0b0b;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(199, 192, 192, 0.1);
+}
+
+.answer-container h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #333; /* Text color for the question */
+}
+
+.answer-container p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    color: #007bff; /* Different text color for the answer */
+}
+
+.add-question-form {
+    margin-top: 2rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+
+.add-question-form h3 {
+    margin-top: 0;
+}
+
+.add-question-form textarea {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.add-question-form button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+}
+
+/* Delete button styles */
+.delete-button {
+    margin-left: 0rem;
+    padding: 0.5rem 1rem; /* Adjust padding for better appearance */
+    background-color: #e74c3c; /* Bright red background color */
+    color: white; /* White text color */
+    border: none; /* Remove default border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    font-size: 1rem; /* Set font size */
+    transition: background-color 0.3s ease; /* Smooth transition effect */
+}
+
+/* Hover effect for delete button */
+.delete-button:hover {
+    background-color: #c0392b; /* Darker red background on hover */
+}

@@ -51,6 +51,139 @@ export default MyApp;
 
 
 
+/*import React from 'react';
+import React, { useRef } from 'react';  //not sure which one works 
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Users from './Components/Users/Users.component';
+import AddUser from './Components/AddUser.component';
+import login from './Components/Login.component';
+import registration from './Components/Registration.component';
+
+function App() {
+  return (
+    <Router>
+      <div>
+        <h1>User Management</h1>
+        <Routes>
+          <Route path="/" element={<Users />} />
+          <Route path="/add" element={<AddUser />} />
+        </Routes>
+      </div>
+    </Router>
+  );
+}
+
+function App() {
+
+  const [users, userSetter] = useState([]);
+  const idQRef = useRef();
+  const idRef = useRef();
+  const nameRef = useRef();
+  const emailRef = useRef();
+  const passwordRef = useRef();
+
+  useEffect(() => {
+    handleQuery();    // only perform on the first render  
+  }, []);
+  
+  const handleEdit = (id) => {
+    console.log(`handleEdit(${id})`)
+    let user = users.find( user => user.id === id)
+    idRef.current.value = user.id ;
+    nameRef.current.value = user.name;
+    addressRef.current.value = user.address;
+    countryRef.current.value = user.country;
+  }
+  const handleUpdate = () => {
+    console.log(`handleUpdate()`)
+    let user =  {}
+    user.id = idRef.current.value;
+    user.name = nameRef.current.value;
+    user.address = addressRef.current.value;
+    user.country = countryRef.current.value;
+    console.log(JSON.stringify(user));
+    let url = `http://localhost:5000/users/${user.id}`;
+
+    let parameters = {
+        method: "PATCH",
+        headers: {
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(user)
+    }
+    console.log(url);
+    fetch( url, parameters)
+        .then( res => res.json())
+        .then( json => {
+            console.log(json);  
+            handleQuery();           
+        });
+  }  
+  const handleDelete = (id) => {
+    console.log(`handleDelete(${id})`)
+    let parameters = {
+      method: "DELETE"
+    }
+    let url = `http://localhost:5000/users/${id}`;  //localhost:5000/users/:id [DELETE]
+    fetch( url, parameters)
+      .then( res => res.json())
+      .then( json => {
+        console.log(json);
+        handleQuery();
+      })
+  }
+  const handleInsert = () => {
+    let user =  {}
+    user.id = idRef.current.value;
+    user.name = nameRef.current.value;
+    user.address = addressRef.current.value;
+    user.country = countryRef.current.value;
+    console.log(JSON.stringify(user));
+    let url = `http://localhost:5000/users`;
+
+    let parameters = {
+        method: "POST",
+        headers: {
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(user)
+    }
+    console.log(url);
+    fetch( url, parameters)
+        .then( res => res.json())
+        .then( json => {
+            console.log(json); 
+            handleQuery();
+        });
+  }
+  const handleQuery = () => {
+    let parameters = {
+      method: "GET"
+    }
+    console.log('handleQuery called') 
+    let url = `http://localhost:5000/users`;        //localhost:5000/users/ [GET]
+    fetch( url, parameters)
+      .then( res => res.json())
+      .then( json => {
+        userSetter( json.users );
+      })
+  }
+  return (
+    <div className="App">
+     <UserList users={users} handleEdit={handleEdit} handleDelete={handleDelete}/>
+     <UserForm handleInsert={handleInsert} handleUpdate={handleUpdate} idRef={idRef} nameRef={nameRef}  addressRef={addressRef}  countryRef={countryRef}/>
+    </div>
+  );
+}
+
+export default App;
+
+export default App;
+*/
+
+
 
 
 
