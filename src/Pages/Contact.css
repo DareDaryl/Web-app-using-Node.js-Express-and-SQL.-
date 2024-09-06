@@ -6,8 +6,11 @@
     border: 1px solid #0f0c0c; /* Match the border style of the login container */
     border-radius: 8px; /* Match the border-radius of the login container */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    background: #0e0303; /* Light background for better contrast */
-  }
+    background: url('/src/Images.svg/rock-band-playing-electric-guitar-on-dark-toned-background-with-smoke-ai-generated-free-photo.jpg') no-repeat center center, rgba(14, 3, 3, 0.8); /* Add your image path here */
+    background-size: cover; /* Ensure the background image covers the entire container */
+    color: white; /* Optional: Set text color for contrast */
+}
+
   
   h1 {
     text-align: center;

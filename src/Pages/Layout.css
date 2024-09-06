@@ -1,4 +1,5 @@
 /* src/Pages/Layout.css */
+
 .layout {
     display: flex;
     flex-direction: column;
@@ -14,16 +15,34 @@
     flex-direction: column;
     align-items: center;
     box-shadow: 0 2px px rgba(0, 0, 0, 0.1);
+    
        /* Border to define the header area */
     border: 2px solid #211f17; /* Golden color to contrast with gradient */
        /* Ensure the header takes full width */
     width: 100%;
 }
-
+/* src/Pages/Header.css */
 .header .logo h1 {
     margin: 0;
-    font-size: 2.0rem;
+    font-size: 2rem; /* Increased font size for more impact */
+    font-family: 'Poppins', sans-serif; /* Example custom font */
+    color: #f8f1f1; /* Light text color for contrast */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+    letter-spacing: 2px; /* Adds spacing between letters */
+    font-weight:100; /* Make the font bold for better emphasis */
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Smooth transition effects */
 }
+
+/* Add a hover effect to make it interactive */
+.header .logo h1:hover {
+    color: #f39c12; /* Change color on hover */
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7); /* Enhance shadow on hover */
+}
+
+/*.header .logo h1 {
+    margin: 0;
+    font-size: 2.0rem;
+}*/ 
 
 .header nav ul {
     list-style: none;

@@ -1,4 +1,5 @@
 // src/Pages/Layout.js
+//CREATED LAYOUT SO I COULD WRAP EVERYTHING INTO IT 
 import React from 'react';
 import { Outlet, Link } from 'react-router-dom'; // Use Link for client-side navigation
 import './Layout.css'; // Import CSS for styling
@@ -8,7 +9,7 @@ const Layout = () => {
         <div className="layout">
             <header className="header">
                 <div className="logo">
-                    <h1>My Project 4</h1>
+                    <h1>Your musical adventures await</h1>
                 </div>
                 <nav>
                     <ul>

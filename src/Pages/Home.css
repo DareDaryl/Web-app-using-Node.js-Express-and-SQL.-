@@ -1,0 +1,103 @@
+/* src/Pages/Home.css */
+/* src/Pages/Home.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Ensure the container takes up at least the full viewport height */
+    /* maybe ---> background: url('/src/Images.svg/rock-band-playing-electric-guitar-on-dark-toned-background-with-smoke-ai-generated-free-photo.jpg') no-repeat center center fixed; /* Replace with your image path */
+    background-size: cover; /* Cover the entire container */
+    color: white; /* Adjust text color for visibility */
+    text-align: center; /* Center align text */
+    font-family: 'bookerly', sans-serif; /* Apply the Google Font */
+
+}
+.home-header {   /*Dancing in the dark title container*/
+    position: relative;
+    z-index: 1;
+    font-size: 1.25rem;
+    font-family: 'bookerly', sans-serif; /* Apply the Google Font */
+    margin: 0;
+    color: #9b220c; /* Change this to your desired color */
+}
+.home-header {
+    position: relative; /* Ensure the background image and text are layered correctly */
+    padding: 4rem 2rem; /* Add more padding for a spacious look */
+    color: rgb(245, 243, 243); /* White text color for contrast */
+    text-align: center; /* Center align text */
+    background: url('/src/Images.svg/headphones.jpg') no-repeat center center; /* Add your background image */
+    background-size: cover; /* Ensure the image covers the whole header */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5); /* Add a subtle inner shadow */
+    border-radius: 0 0 15px 15px; /* Rounded bottom corners */
+}
+
+.home-header {
+    padding: 2rem;
+}
+
+.explore-button {
+    background-color: #e74c3c; /* Button background color */
+    color: white; /* Button text color */
+    border: none;
+    border-radius: 4px; /* Rounded corners */
+    padding: 0.75rem 1.5rem; /* Adjust button padding */
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.explore-button:hover {
+    background-color: #c0392b; /* Darker red background on hover */
+}
+
+.home-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background: url('/src/Images.svg/rock-band-playing-electric-guitar-on-dark-toned-background-with-smoke-ai-generated-free-photo.jpg') no-repeat center center, rgba(0, 0, 0, 0.7); /* Add your image path here */
+    background-size: cover; /* Ensure the background image covers the entire card */
+    color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    flex: 1;
+    max-width: 300px; /* Limit card width */
+    text-align: center;
+    position: relative; /* Ensure content stays on top of the background */
+}
+
+/* Optional: Add a pseudo-element for additional overlay if needed */
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Slightly darker overlay */
+    z-index: 1; /* Make sure it sits above the background image */
+    border-radius: 8px;
+}
+
+.card-content {
+    position: relative;
+    z-index: 2; /* Ensure text is above the overlay */
+}
+
+
+.home-footer {
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent footer background */
+    color: white;
+    text-align: center;
+}
